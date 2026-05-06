@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Portfólio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="botao-container">
+                <button onclick="mostrarSecao('sobre-mim')">
+                    <i data-lucide="house"></i>
+                </button>
+                <span class="legenda">Sobre mim</span>
+            </div>
+
+            <div class="botao-container">
+                <button onclick="mostrarSecao('formacao')">
+                    <i data-lucide="BookCheck"></i>
+                </button>
+                <span class="legenda">Formação</span>
+            </div>
+
+            <div class="botao-container">
+                <button onclick="mostrarSecao('projetos')">
+                    <i data-lucide="Wrench"></i>
+                </button>
+                <span class="legenda">Projetos</span>
+            </div>
+
+            <div class="botao-container">
+                <button onclick="mostrarSecao('contato')">
+                    <i data-lucide="Mail"></i>
+                </button>
+                <span class="legenda">Contato</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <aside id="card">
+            <img src="imagens/foto site.png" alt="">
+
+            <h2>Eduardo Sampaio</h2>
+
+            <p>Estudante de ciência da computação</p>
+
+           <div class="social-links">
+
+           </div>
+        </aside>
+
+        <section id="conteudo-dinamico">
+
+            <div id="sobre-mim" class="secao-ativa">
+                <h1>Sobre mim</h1>
+                <p>Olá! Sou o Eduardo, tenho 21 anos e sou estudante de Ciência da Computação. Para mim, programar vai muito além de escrever linhas de código; é a ferramenta que utilizo para transformar ideias em soluções reais. Sou movido pelo desafio de resolver problemas complexos e pela busca constante de aprendizado na área tecnológica. Convido você a explorar meus projetos e conhecer como transformo lógica em inovação.</p>
+            </div>
+
+            <div id="formacao" class="secao-oculta">
+                <h1>Formação</h1>
+                <h2>Tecnologias</h2>
+                <!--Icones com as tecnologias que sei-->
+                <h2>Cursos</h2>
+                <!--Lista de cursos que já fiz-->
+                <h2>Idiomas</h2>
+                <!--Idiomas que domino-->
+            </div>
+
+            <div id="projetos" class="secao-oculta">
+                <!--Links dos projetos que já fiz-->
+            </div>
+
+            <div id="contato" >
+                <!--Campos para contato-->
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+    lucide.createIcons();
+    </script>
+</body>
+</html>

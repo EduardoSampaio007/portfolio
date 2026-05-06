@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-fundo: #121212;
+    --cor-card: rgb(61, 61, 61);
+    --cor-destaque-fonte: rgb(0, 160, 125);
+
+    --fonte-principal:"Outfit", sans-serif;;
+}
+
+body{
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    height: 100vh;
+    gap: 20px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Geramos um ruído visual usando SVG estático (técnica leve) */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04; /* Ajuste aqui para ser mais ou menos visível */
+    pointer-events: none; /* Garante que você consiga clicar nos botões abaixo */
+    z-index: 9999;
+}
+
+header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 10px;
+}
+
+nav{
+    display: flex;
+    gap: 40px;
+    background-color: var(--cor-card);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+nav button{
+    border: none;
+    background-color: var(--cor-card);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+nav button:hover{
+    background-color: var(--cor-destaque-fonte);
+    transform: translateY(-3px);
+}
+
+.botao-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.legenda {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--cor-destaque-fonte);
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--cor-borda);
+    font-size: 12px;
+
+    /* Posicionamento abaixo do botão */
+    position: absolute;
+    top: 110%; /* Fica logo abaixo */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+
+    /* Transição suave */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.botao-container:hover .legenda {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px); /* Efeito de descida suave */
+}
+
+main{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+#card{
+    height: 80vh;
+    text-align: center;
+    background-color: var(--cor-card);
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    padding-bottom: 20px;
+    font-size: 1.3em;
+
+    box-shadow: 0 0 20px rgba(0, 160, 125, 0.466);
+}
+
+#card > h2{
+    color: var(--cor-destaque-fonte);
+}
+
+#card img{
+    margin-top: 20px;
+    border-radius: 50px;
+}
+
+#conteudo-dinamico{
+    height: 80vh;
+    color: white;
+    background-color: var(--cor-card);
+    border-radius: 10px;
+    padding: 10px;
+
+    
+}
+
+#sobre-mim{
+    padding: 20px;
+}
+
+#sobre-mim > h1{
+    font-size: 3.5em;
+    color: var(--cor-destaque-fonte);
+}
+
+#sobre-mim > p{
+    margin-top: 20px;
+    font-size: 2em;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.secao-oculta{
+    display: none;
+}
+
