@@ -107,6 +107,20 @@ main{
     padding: 20px;
 }
 
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
 #card{
     height: 80vh;
     text-align: center;
@@ -116,6 +130,8 @@ main{
     padding: 10px;
     padding-bottom: 20px;
     font-size: 1.3em;
+
+    animation: flutuar 10s ease-in-out infinite;
 }
 
 #card > h2{
@@ -123,10 +139,9 @@ main{
 }
 
 #card img{
-    border: 4px solid rgb(0, 85, 67);
+    border: 4px solid var(--cor-destaque-fonte);
     margin-top: 20px;
     border-radius: 50px;
-    box-shadow: 0 0 20px rgba(0, 160, 125, 0.466);
 }
 
 #conteudo-dinamico{
