@@ -12,11 +12,15 @@
     --fonte-principal:"Outfit", sans-serif;;
 }
 
+html{
+    height: auto;
+}
+
 body{
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
-    height: 100vh;
     gap: 20px;
+    height: auto;
 }
 
 body::before {
@@ -105,6 +109,11 @@ main{
     grid-template-columns: 400px 1fr;
     gap: 20px;
     padding: 20px;
+    
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
 }
 
 @keyframes flutuar {
@@ -125,6 +134,10 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
     
     height: 80vh;
     text-align: center;
@@ -175,7 +188,6 @@ main{
     grid-column: 2;
     display: block;
     position: relative;
-    height: 80vh;
     color: white;
     background-color: var(--cor-fundo);
     border-radius: 10px;
@@ -207,6 +219,9 @@ main{
 }
 
 #formacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
 }
 
@@ -223,24 +238,116 @@ main{
 .stacks{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     gap: 40px;
 }
 
 .stacks i{
+    flex-direction: row;
+    background-color: var(--cor-card);
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid var(--cor-destaque-fonte);
+    padding: 10px;
     font-size: 4em;
     transition: transform 0.3s ease;
-    cursor: help;
+}
+
+.stacks > i > span{
+    font-size: 0.5em;
+    padding-left: 20px;
+    font-family: var(--fonte-principal);
 }
 
 .stacks i:hover{
-    transform: scale(1.3) rotate(5deg);
+    transform: scale(1.1) rotate(0.8deg);
 }
 
 #formacao > ul{
-    padding-left: 40px;
-    padding-top: 10px;
-    font-size: 1.3em;
+    background-color: var(--cor-card);
+    padding: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--cor-destaque-fonte);
+    font-size: 1.5em;
+}
+
+#contato{
+    background-color: var(--cor-card);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#contato > h1{
+    font-size: 3.5em;
+    color: var(--cor-destaque-fonte);
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+}
+
+.campo > label{
+    font-size: 1.2em;
+    padding: 10px 0px 10px 0px;
+}
+
+.campo > input{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(90, 90, 90);
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    font-family: var(--fonte-principal);
+}
+
+.campo > input:focus-within{
+    outline: 1px solid var(--cor-destaque-fonte);
+}
+
+.campo > input::placeholder{
+    color: white;
+}
+
+.campo > textarea{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(90, 90, 90);
+    padding: 10px 0px 0px 10px;
+    font-family: var(--fonte-principal);
+}
+
+.campo > textarea:focus-within{
+    outline: 1px solid var(--cor-destaque-fonte);
+}
+
+.campo > textarea::placeholder{
+    color: white;
+}
+
+.campo > button{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--cor-destaque-fonte);
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: var(--fonte-principal);
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+.campo > button:hover{
+    background-color: rgb(0, 117, 92);
+    transform: scale(1.03);
 }
 
 .secao-oculta{

@@ -58,6 +58,8 @@
                 <button><i data-lucide="send"></i></button>
                 <button><i data-lucide="phone"></i></button>
            </div>
+
+           <p>Entre em contato</p>
         </aside>
 
         <section id="conteudo-dinamico">
@@ -69,24 +71,25 @@
 
             <div id="formacao" class="secao-oculta">
                 <h1>Formação</h1>
-                <h2>Tecnologias</h2>
+                <h2>Tecnologias que domino: </h2>
                 <div class="stacks">
-                    <i class="devicon-php-plain"></i>
-                    <i class="devicon-html5-plain-wordmark colored"></i>
-                    <i class="devicon-css3-plain-wordmark colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-azuresqldatabase-plain colored"></i>
+                    <i class="devicon-php-plain"><span>PHP</span></i>
+                    <i class="devicon-html5-plain-wordmark colored"><span>HTML5</span></i>
+                    <i class="devicon-css3-plain-wordmark colored"><span>CSS3</span></i>
+                    <i class="devicon-javascript-plain colored"><span>JavaScript</span></i>
+                    <i class="devicon-azuresqldatabase-plain colored"><span>SQL</span></i>
                 </div>
-                <h2>Cursos</h2>
+                <h2>Cursos que já fiz: </h2>
                 <ul>
                     <li>HTML5 e CSS3 - Curso em vídeo</li>
                     <li>PHP orientado a objetos moderno - Technology today</li>
                     <li>SQL do básico ao avançado - Technology today</li>
                     <li>SQL do básico ao avançado - Technology today</li>
                 </ul>
-                <h2>Idiomas</h2>
+                <h2>Idiomas que domino: </h2>
                 <ul>
-                    <li>Inglês avançado</li>
+                    <li>Inglês</li>
+                    <li>Português brasileiro</li>
                 </ul>
             </div>
 
@@ -94,8 +97,29 @@
                 <!--Links dos projetos que já fiz-->
             </div>
 
-            <div id="contato" >
-                <form action=""></form>
+            <div id="contato" class="secao-oculta">
+                <h1>Vamos trabalhar juntos!</h1>
+
+                <form action="">
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="" id="nome" placeholder="Seu nome...">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="" id="email" placeholder="Seu e-mail...">
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="" id="mensagem" rows="8" placeholder="Deixe sua mensagem..."></textarea>
+                    </div>
+
+                    <div class="campo">
+                        <button onclick="enviar()">Enviar</button>
+                    </div>
+                </form>
             </div>
 
         </section>
