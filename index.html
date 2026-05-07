@@ -4,6 +4,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +62,7 @@
 
         <section id="conteudo-dinamico">
 
-            <div id="sobre-mim" class="secao-ativa">
+            <div id="sobre-mim">
                 <h1>Sobre mim</h1>
                 <p>Olá! Sou Eduardo, tenho 21 anos e sou estudante de Ciência da Computação. Para mim, programar vai muito além de escrever linhas de código; é a ferramenta que utilizo para transformar ideias em soluções reais. Sou movido pelo desafio de resolver problemas complexos e pela busca constante de aprendizado na área tecnológica. Convido você a explorar meus projetos e conhecer como transformo lógica em inovação.</p>
             </div>
@@ -69,11 +70,24 @@
             <div id="formacao" class="secao-oculta">
                 <h1>Formação</h1>
                 <h2>Tecnologias</h2>
-                <!--Icones com as tecnologias que sei-->
+                <div class="stacks">
+                    <i class="devicon-php-plain"></i>
+                    <i class="devicon-html5-plain-wordmark colored"></i>
+                    <i class="devicon-css3-plain-wordmark colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-azuresqldatabase-plain colored"></i>
+                </div>
                 <h2>Cursos</h2>
-                <!--Lista de cursos que já fiz-->
+                <ul>
+                    <li>HTML5 e CSS3 - Curso em vídeo</li>
+                    <li>PHP orientado a objetos moderno - Technology today</li>
+                    <li>SQL do básico ao avançado - Technology today</li>
+                    <li>SQL do básico ao avançado - Technology today</li>
+                </ul>
                 <h2>Idiomas</h2>
-                <!--Idiomas que domino-->
+                <ul>
+                    <li>Inglês avançado</li>
+                </ul>
             </div>
 
             <div id="projetos" class="secao-oculta">
@@ -81,7 +95,7 @@
             </div>
 
             <div id="contato" >
-                <!--Campos para contato-->
+                <form action=""></form>
             </div>
 
         </section>
@@ -93,4 +107,6 @@
     lucide.createIcons();
     </script>
 </body>
+
+<script src="scripts.js"></script>
 </html>
